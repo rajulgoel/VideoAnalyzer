@@ -163,9 +163,8 @@ This project is available for personal and educational use.
 
 ## 👨‍💻 Author
 
-Created by Rachit
+Created by Rajul Goel
 
 ### Connect with me:
-```bash
-start https://www.instagram.com/rachit.zip
-```
+
+[Instagram](https://www.instagram.com/rajulgoel_)
