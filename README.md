@@ -1,4 +1,4 @@
-# YouTube Comment Sentiment Analyzer (👉 [Try Now](https://comment-analyzer-kiit.streamlit.app/) )
+# YouTube Comment Sentiment Analyzer (👉 [Try Now](https://veo-analyzer.streamlit.app/) )
 
 **CommentAnalyzer** is a powerful and interactive **Streamlit** app that analyzes comments from **YouTube** videos, visualizing sentiment with beautiful cyberpunk-themed charts and real-time analysis.
 
