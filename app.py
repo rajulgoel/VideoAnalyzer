@@ -696,9 +696,11 @@ def main():
                 # Bar Chart for mobile
                 fig2, ax2 = plt.subplots(facecolor='none', figsize=(5, 4))
                 bars = sns.barplot(
-                    x=['POSITIVE', 'NEGATIVE'], 
-                    y=[positive_count, negative_count], 
-                    ax=ax2, 
+                    x=['POSITIVE', 'NEGATIVE'],
+                    y=[positive_count, negative_count],
+                    hue=['POSITIVE','NEGATIVE'],
+                    legend=False,
+                    ax=ax2,
                     palette=['#00ff88', '#ff0066'],
                     edgecolor=['#00f2ff', '#ff00ff'],
                     linewidth=2
@@ -754,9 +756,11 @@ def main():
                 # Bar Chart
                 fig2, ax2 = plt.subplots(facecolor='none', figsize=(6, 6))
                 bars = sns.barplot(
-                    x=['POSITIVE', 'NEGATIVE'], 
-                    y=[positive_count, negative_count], 
-                    ax=ax2, 
+                    x=['POSITIVE', 'NEGATIVE'],
+                    y=[positive_count, negative_count],
+                    hue=['POSITIVE','NEGATIVE'],
+                    legend=False,
+                    ax=ax2,
                     palette=['#00ff88', '#ff0066'],
                     edgecolor=['#00f2ff', '#ff00ff'],
                     linewidth=2
@@ -797,7 +801,7 @@ def main():
             
             st.dataframe(
                 display_df.style
-                .applymap(lambda x: 'color: #00ff88' if x == 'positive' else ('color: #ff0066' if x == 'negative' else 'color: #e0f7ff'), subset=['sentiment'])
+                .map(lambda x: 'color: #00ff88;font-weight:bold' if x == 'positive' else ('color: #ff0066;font-weight:bold' if x == 'negative' else 'color: #e0f7ff;font-weight:bold'), subset=['sentiment'])
                 .set_properties(**{'background-color': 'rgba(10, 14, 23, 0.8)', 'color': '#e0f7ff', 'border': '1px solid #0084ff'}),
                 use_container_width=True,
                 height=300
@@ -806,7 +810,7 @@ def main():
             # PC: Show more data and full width
             st.dataframe(
                 comments_df.head(15).style
-                .applymap(lambda x: 'color: #00ff88' if x == 'positive' else ('color: #ff0066' if x == 'negative' else 'color: #e0f7ff'), subset=['sentiment'])
+                .map(lambda x: 'color: #00ff88;font-weight:bold' if x == 'positive' else ('color: #ff0066;font-weight:bold' if x == 'negative' else 'color: #e0f7ff;font-weight:bold'), subset=['sentiment'])
                 .set_properties(**{'background-color': 'rgba(10, 14, 23, 0.8)', 'color': '#e0f7ff', 'border': '1px solid #0084ff'}),
                 use_container_width=True,
                 height=400
